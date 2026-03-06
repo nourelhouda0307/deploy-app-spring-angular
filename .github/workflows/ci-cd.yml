@@ -28,3 +28,8 @@ jobs:
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/angular-app:latest ./angular-app
       - name: Push Spring Boot image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/spring-app:latest
+      - name: Push Spring Boot image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/spring-app:latest
+
+      - name: Push Angular image          # ← AJOUTER CES 2 LIGNES
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/angular-app:latest
